@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import DashboardPage from '../pages/dashboard-page';
 import Error404Page from '../pages/error404-page';
 import LmsPage from '../pages/lms-page';
-import LoginPage from "../pages/login-page";
-import RegisterPage from "../pages/register-page";
+import LoginPage from "../pages/login/login-page";
+import RegisterPage from "../pages/register/register-page";
+
 
 export default class Loginpass extends Component {
     render() {
