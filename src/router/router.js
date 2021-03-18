@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route} from "react-route-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import DashboardPage from '../pages/dashboard-page';
+import Error404Page from '../pages/error404-page';
 import LmsPage from '../pages/lms-page';
 import LoginPage from "../pages/login-page";
 import RegisterPage from "../pages/register-page";
@@ -10,10 +11,11 @@ export default class Loginpass extends Component {
         return (
             <Router>
                 <Switch>
-                    <Route path="/" component={LmsPage} />
+                    <Route exact path="/" component={LmsPage} />
                     <Route path="/register" component={RegisterPage} />
                     <Route path="/admin" component={LoginPage} />
                     <Route path="/dash" component={DashboardPage} />
+                    <Route path="*" component={Error404Page} />
                 </Switch>
             </Router>        )
     }
