@@ -1,17 +1,17 @@
 import React from 'react'
 
-import {Link} from "react-router-dom";
-import bgImage from "./../assets/bg-01.jpg";
+import { Link } from "react-router-dom";
 import "./../assets/main.css";
+import  bgImage from "./../assets/bg-01.jpg"
+
 
 export default function Login() {
     return (
         <div>
-             <div>
           <div className="limiter">
             <div
               className="container-login100"
-              style={{ backgroundImage: `url(${bgImage})`}}
+              style={{ backgroundImage: `url(${bgImage})` }}
             >
               <div className="wrap-login100">
                 <form className="login100-form validate-form">
@@ -32,7 +32,7 @@ export default function Login() {
                       name="username"
                       placeholder="Username"
                     />
-                    <span className="focus-input100" data-placeholder="+" ></span>
+                    <span className="focus-input100" data-placeholder="😃" ></span>
                   </div>
                   <div
                     className="wrap-input100 validate-input"
@@ -44,7 +44,7 @@ export default function Login() {
                       name="pass"
                       placeholder="Password"
                     />
-                    <span className="focus-input100" data-placeholder="+" />
+                    <span className="focus-input100" data-placeholder="🤨" />
                   </div>
                 
                   <div className="container-login100-form-btn">
@@ -53,10 +53,10 @@ export default function Login() {
                   <div className="text-center p-t-90">
                     <a
                       className="txt1"
-                      href=""
+                      href="https://colorlib.com/etc/lf/Login_v3/index.html#"
                     >
-                        <Link to="/register" className="text-white">Create your account</Link>
-                       
+                      <br/>
+                      <Link to="/register" className="text-white">Create your account </Link>
                     </a>
                   </div>
                 </form>
@@ -65,6 +65,5 @@ export default function Login() {
           </div>
           <div id="dropDownSelect1" ></div>
       </div>
-        </div>
     )
 }

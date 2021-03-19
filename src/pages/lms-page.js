@@ -4,7 +4,7 @@ export default class LmsPage extends Component {
     render() {
         return (
             <div>
-                hello
+                Lms Page
             </div>
         )
     }

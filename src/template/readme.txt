@@ -1,1 +1,1 @@
-here we put the template html all the files needed
+here we put the template html with all the files needed 😀 !!
