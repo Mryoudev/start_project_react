@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class LmsPage extends Component {
+export default class Error404Page extends Component {
     render() {
         return (
             <div>
-                
+                Page not fond 🙄 !!
             </div>
         )
     }

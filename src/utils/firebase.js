@@ -1,23 +1,20 @@
-import firebase from 'firebase/app'
-import 'firebase/auth';
-
-// Your web app's Firebase configuration
-var firebaseConfig = {
-   apiKey: "AIzaSyA4ssJJghKkg1s_AD8ENGJb18BuSKbJvyM",
-   authDomain: "lms-project-a8cc1.firebaseapp.com",
-   databaseURL: "https://lms-project-a8cc1-default-rtdb.firebaseio.com",
-   projectId: "lms-project-a8cc1",
-   storageBucket: "lms-project-a8cc1.appspot.com",
-   messagingSenderId: "670123672038",
-   appId: "1:670123672038:web:c826ba91ac87088bd5d627"
- };
-
-
-
-// Initialize Firebase  
-const app = firebase.initializeApp(firebaseConfig);  
+  import firebase from 'firebase/app'
+  import 'firebase/auth'
   
-//exporter notre base de données
-export default app; 
-//export the auth app
-export const auth = app.auth();
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD09LEd2t845Cp2jXDO0PMRzWRfAdAgwvI",
+    authDomain: "lms-project-c3966.firebaseapp.com",
+    databaseURL: "https://lms-project-c3966-default-rtdb.firebaseio.com",
+    projectId: "lms-project-c3966",
+    storageBucket: "lms-project-c3966.appspot.com",
+    messagingSenderId: "1061130114462",
+    appId: "1:1061130114462:web:bb951e9f475294cdad328f"
+  };
+
+  const app=firebase.initializeApp(firebaseConfig);
+  // exporter notre base de donnees 
+  export default app;
+  // export the auth app
+ export const auth = app.auth();
+ 
