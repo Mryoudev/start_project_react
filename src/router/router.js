@@ -9,7 +9,7 @@ import Error404Page from "../pages/Error 404 page";
 import LmsPage from "../pages/lms-page";
 import RegisterPage from "../pages/register-page";
 import LgPage from "../pages/login-page";
-import { AuthProvider } from "../shared/auth/Auth-context";
+import { AuthProvider } from "../shared/auth/auth-context";
 export default function RouterApp() {
   return (
     

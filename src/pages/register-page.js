@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Register from '../components/register'
-import AuthContext from '../shared/auth/Auth-context';
+import AuthContext from '../shared/auth/auth-context';
 import {auth} from "../utils/firebase"
 export default class RegisterPage extends Component {
   constructor() {

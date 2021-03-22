@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Login from '../components/login'
-import AuthContext from '../shared/auth/Auth-context';
+import AuthContext from '../shared/auth/auth-context';
 
 
 export default class LgPage extends Component {

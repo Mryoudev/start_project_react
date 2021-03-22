@@ -3,13 +3,14 @@
   
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyD09LEd2t845Cp2jXDO0PMRzWRfAdAgwvI",
-    authDomain: "lms-project-c3966.firebaseapp.com",
-    databaseURL: "https://lms-project-c3966-default-rtdb.firebaseio.com",
-    projectId: "lms-project-c3966",
-    storageBucket: "lms-project-c3966.appspot.com",
-    messagingSenderId: "1061130114462",
-    appId: "1:1061130114462:web:bb951e9f475294cdad328f"
+    apiKey: "AIzaSyCQ34xxxP_ogKxmK4tvsnYMgPPL5oZXInM",
+    authDomain: "start-project-react.firebaseapp.com",
+    projectId: "start-project-react",
+    storageBucket: "start-project-react.appspot.com",
+    messagingSenderId: "492168395625",
+    appId: "1:492168395625:web:4e3966b94ca02ba23b9bf8",
+    measurementId: "G-C36G2WQT97"
+
   };
 
   const app=firebase.initializeApp(firebaseConfig);
