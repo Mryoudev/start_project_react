@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import DashboardPage from "../pages/dashboard-page ";
 import Error404Page from "../pages/Error 404 page";
-import RegisterPage from "../pages/register-page";
-import LgPage from "../pages/login-page";
-import { AuthProvider } from "../shared/auth/Auth-context";
+import RegisterPage from "../pages/register/register-page";
+import LgPage from "../pages/login/login-page";
+import { AuthProvider } from "../shared/auth/auth-context";
 import HomePage from "../pages/home-page";
 import ManagerCategoriesPage from "../pages/managercategories-page";
 import ManagerProductPage from "../pages/managerproduct-page";
