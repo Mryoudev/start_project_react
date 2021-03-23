@@ -12,6 +12,11 @@ constructor(props){
     currentUser:{}
     }
 }
+componentDidMount(){
+    auth.onAuthStateChanged((user)=>{
+      this.setState({currentUser:user})
+    })
+  }
 
 // shared features
 login=(email,password)=>{
