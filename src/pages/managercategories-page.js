@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Globaldesign from '../components/globaldesign'
 import Categorie from '../components/categorie'
-import CategorieModel from '../models/categorie-model'
+import CategorieModel from '../models/model'
 import axios from '../utils/axios'
 export default class ManagerCategoriesPage extends Component {
     constructor() {
@@ -192,43 +192,43 @@ export default class ManagerCategoriesPage extends Component {
     }
 
     //appel a la fonction put de axios
-    axios
-      .put("students/" + this.state.updatedStudent_id + ".json", student_data)
-      .then((response) => {
+    // axios
+    //   .put("students/" + this.state.updatedStudent_id + ".json", student_data)
+    //   .then((response) => {
 
-        //changer l'etudiant dans la liste
-        let newList = this.state.list_student_data;
-        newList.forEach((s) => {
-          if (s.id == this.state.updatedStudent_id) {
-            s.nom = response.data.nom;
-            s.pren = response.data.pren;
-            s.email = response.data.email;
-            s.avatar = response.data.avatar;
-          }
-        });
-        //modifier la liste du state
-        this.setState({ list_student_data: newList })
-        //modifier la liste backup aussi
-        this.setState({ backupForFilterList: newList });
+    //     //changer l'etudiant dans la liste
+    //     let newList = this.state.list_student_data;
+    //     newList.forEach((s) => {
+    //       if (s.id == this.state.updatedStudent_id) {
+    //         s.nom = response.data.nom;
+    //         s.pren = response.data.pren;
+    //         s.email = response.data.email;
+    //         s.avatar = response.data.avatar;
+    //       }
+    //     });
+    //     //modifier la liste du state
+    //     this.setState({ list_student_data: newList })
+    //     //modifier la liste backup aussi
+    //     this.setState({ backupForFilterList: newList });
 
-        //vider le formulaire
-        event.target.reset();
+    //     //vider le formulaire
+    //     event.target.reset();
 
-        //vider les variables state
-        this.setState({
-          nom: "",
-          pren: "",
-          email: "",
-          avatar: "",
-          updatedStudent_id: -1,
-          textBtnState: "Add Student",
-          iconBtnState: "fas fa-plus-circle",
-          action: "ADD",
+    //     //vider les variables state
+    //     this.setState({
+    //       nom: "",
+    //       pren: "",
+    //       email: "",
+    //       avatar: "",
+    //       updatedStudent_id: -1,
+    //       textBtnState: "Add Student",
+    //       iconBtnState: "fas fa-plus-circle",
+    //       action: "ADD",
 
 
 
-        })
-      });
+    //     })
+    //   });
     
       }
 
