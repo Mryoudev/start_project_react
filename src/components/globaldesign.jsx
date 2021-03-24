@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../assets/dash.css"
 
 export default function Globaldesign(props) {
@@ -17,42 +18,57 @@ export default function Globaldesign(props) {
       </a></div>
                     <div className="sidebar-wrapper">
                         <ul className="nav">
-                            <li className="  ">
+                          <Link to="/dash">
+                              <li className="  ">
                                 <a className="nav-link" href="./dash">
                                     <i className="material-icons">dashboard</i>
                                     <p>Dashboard</p>
                                 </a>
                             </li>
+                            </Link>
                             {/* <li className="nav-item ">
                                 <a className="nav-link" href="./user.html">
                                     <i className="material-icons">person</i>
                                     <p>User Profile</p>
                                 </a>
                             </li> */}
-                            <li className="nav-item ">
-                                <a className="nav-link" href="./categories">
-                                    <i className="material-icons">content_paste</i>
-                                    <p>Categories</p>
-                                </a>
-                            </li>
-                            <li className="nav-item ">
-                                <a className="nav-link" href="./productes">
-                                    <i className="material-icons">library_books</i>
-                                    <p>Products</p>
-                                </a>
-                            </li>
+
+                            <Link to="/categories">
+                                <li className="nav-item ">
+                                    <a className="nav-link" href="./categories">
+                                        <i className="material-icons">content_paste</i>
+                                        <p>Categories</p>
+                                    </a>
+                                </li>
+                            </Link>
+
+                            <Link to ="/productes">
+                                <li className="nav-item ">
+                                    <a className="nav-link" href="./productes">
+                                        <i className="material-icons">library_books</i>
+                                        <p>Products</p>
+                                    </a>
+                                </li>
+                            </Link>
+
+                            <Link to ="">
                             <li className="nav-item ">
                                 <a className="nav-link" href="./orders">
                                     <i className="material-icons">storefront</i>
                                     <p>Orders</p>
                                 </a>
                             </li>
-                            {/* <li className="nav-item ">
+                            </Link>
+
+                            <Link to="/customers">
+                                <li className="nav-item ">
                                 <a className="nav-link" href="./rtl.html">
                                     <i className="material-icons">people</i>
-                                    <p>Customers</p>
+                                    <p>Customers</p> 
                                 </a>
-                            </li> */}
+                            </li>
+                            </Link>
+
                         </ul>
                     </div>
                 </div>
@@ -61,7 +77,7 @@ export default function Globaldesign(props) {
                     <nav className="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                         <div className="container-fluid">
                             <div className="navbar-wrapper">
-                                <a className="navbar-brand" href="javascript:;">Dashboard</a>
+                               <a className="navbar-brand" href="javascript:;"></a>
                             </div>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="sr-only">Toggle navigation</span>

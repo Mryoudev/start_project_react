@@ -3,6 +3,7 @@ import Globaldesign from '../components/globaldesign'
 import Categorie from '../components/categorie'
 import CategorieModel from '../models/model'
 import axios from '../utils/axios'
+import ManagerClient from '../pages/manage-client'
 export default class ManagerCategoriesPage extends Component {
     constructor() {
         super()

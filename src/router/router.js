@@ -14,6 +14,7 @@ import ManagerCategoriesPage from "../pages/managercategories-page";
 import ManagerProductPage from "../pages/managerproduct-page";
 import OrderPage from "../pages/order-page";
 import ShoppingCartPage from "../pages/shoppingcart-page";
+import ManageClientPage from "../pages/manage-client";
 export default function RouterApp() {
   return (
     
@@ -27,9 +28,10 @@ export default function RouterApp() {
             <Route path="/categories" component={ManagerCategoriesPage} />
             <Route path="/productes" component={ManagerProductPage} />
             <Route path="/orders" component={OrderPage} />
-            <Route path="/shoppingcart" component={ShoppingCartPage} />
+            <Route path="/shoppingcart" component={ShoppingCartPage} /> 
+            <Route path="/customers" component={ManageClientPage} />
+            <Route path="/manageClient" component={ManageClientPage} />
             <Route path="*" component={Error404Page} />
-        
         </Switch>
         </AuthProvider>
     </Router>
