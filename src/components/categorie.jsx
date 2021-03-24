@@ -1,4 +1,5 @@
 import React from 'react'
+import CategorieTrait from './categorie-trait'
 
 export default function Categorie(props) {
   return (
@@ -8,14 +9,30 @@ export default function Categorie(props) {
           <div className="container-fluid ">
             <div>
               <h2>Categorie</h2>
-              <div className="mb-4 w-50" style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
-                <input type="text" placeholder=" Name" className="form-control" id="exampleFormControlInput1" />
-              </div>
-              <div className="mb-4 " style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
-                <textarea className="form-control" id="exampleFormControlTextarea1" placeholder=" Descriptions" rows={3} defaultValue={""} />
-              </div>
-              <button type="submit" className="btn btn-primary mb-5">ADD</button>
+              <form onSubmit={props.submit}>
+                <div className="mb-4 w-50" style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
+                  <input
+                    name="nom"
+                    onChange={props.change}
+                    type="text"
+                    placeholder=" Name"
+                    className="form-control"
+                    id="exampleFormControlInput1" />
+                </div>
+                <div className="mb-4 " style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
+                  <textarea
+                    name="description"
+                    onChange={props.change}
+                    className="form-control" id="exampleFormControlTextarea1" placeholder=" Descriptions" rows={3} defaultValue={""} />
+                </div>
+                <button type="submit" className="btn btn-primary mb-5"
+
+
+
+                >ADD</button>
+              </form>
             </div>
+
             <div className="input-group mb-3">
               <input type="text" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2" />
               <button className="btn btn-primary" type="button" id="button-addon2"><i className="fas fa-search" />
@@ -31,48 +48,26 @@ export default function Categorie(props) {
                   <div className="card-body table-responsive">
                     <table className="table table-hover">
                       <thead className style={{ color: 'rgb(0, 0, 0)' }}>
-                        <tr><th>Name</th>
+                        <tr>
+                          <th>Name</th>
                           <th>Description</th>
                           <th>Settings</th>
-                        </tr></thead>
-                      <tbody>
-                        <tr>
-                          <td>{props.nom}</td>
-                          <td>{props.description}</td>
-                          <td>
-                            <button type="button" className="btn btn-outline-danger p-2 "><i className="fas fa-trash-alt" /></button>
-                            <button type="button" className="btn btn-outline-warning p-2 "><i className="fas fa-edit" />
-                            </button>
-                          </td>
                         </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Minerva Hooper</td>
-                          <td>
-                            <button type="button" className="btn btn-outline-danger p-2 "><i className="fas fa-trash-alt" /></button>
-                            <button type="button" className="btn btn-outline-warning p-2 "><i className="fas fa-edit" />
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>Sage Rodriguez</td>
-                          <td>
-                            <button type="button" className="btn btn-outline-danger p-2 "><i className="fas fa-trash-alt" /></button>
-                            <button type="button" className="btn btn-outline-warning p-2 "><i className="fas fa-edit" />
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>Philip Chaney</td>
-                          <td>
-                            <button type="button" className="btn btn-outline-danger p-2 "><i className="fas fa-trash-alt" /></button>
-                            <button type="button" className="btn btn-outline-warning p-2 "><i className="fas fa-edit" />
-                            </button>
-                          </td>
-                        </tr>
+                        </thead>
+                      <tbody >
+                        {
+                          props.data.map(s=> <CategorieTrait
+                            key={s.id}
+                            datadata={s}
+                            remove={props.remove}
+                            edit={props.edit}
+
+
+                          />)
+
+                        }
                       </tbody>
+
                     </table>
                   </div>
                 </div>

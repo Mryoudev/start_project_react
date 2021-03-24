@@ -17,16 +17,12 @@ export default class ManagerCategoriesPage extends Component {
     render() {
         return (
             <Globaldesign>
-
                 <Categorie
                     change={this.change}
                     submit={this.submit}
                     data={this.state.list_categorie}
                     remove={this.remove}
                     edit={this.edit}
-
-
-
                 ></Categorie>
             </Globaldesign>
 
