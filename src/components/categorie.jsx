@@ -37,8 +37,8 @@ export default function Categorie(props) {
                         </tr></thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
-                          <td>Dakota Rice</td>
+                          <td>{props.nom}</td>
+                          <td>{props.description}</td>
                           <td>
                             <button type="button" className="btn btn-outline-danger p-2 "><i className="fas fa-trash-alt" /></button>
                             <button type="button" className="btn btn-outline-warning p-2 "><i className="fas fa-edit" />
