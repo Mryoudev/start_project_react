@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "../assets/dash.css"
 
-export default function Globaldesign(props) {
+export default function AdminTheme(props) {
     return (
 
         <div>
@@ -51,7 +51,7 @@ export default function Globaldesign(props) {
                                 </li>
                             </Link>
 
-                            <Link to ="">
+                            <Link to ="/orders">
                             <li className="nav-item ">
                                 <a className="nav-link" href="./orders">
                                     <i className="material-icons">storefront</i>
@@ -88,7 +88,7 @@ export default function Globaldesign(props) {
                             <div className="collapse navbar-collapse justify-content-end">
                                 <form className="navbar-form">
                                     <div className="input-group no-border">
-                                        <input type="text" defaultValue className="form-control" placeholder="Search..." />
+                                        <input type="text"className="form-control" placeholder="Search..." />
                                         <button type="submit" className="btn btn-white btn-round btn-just-icon">
                                             <i className="material-icons">search</i>
                                             <div className="ripple-container" />

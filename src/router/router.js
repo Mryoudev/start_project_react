@@ -4,17 +4,16 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import DashboardPage from "../pages/dashboard-page ";
-import Error404Page from "../pages/Error 404 page";
-import RegisterPage from "../pages/register/register-page";
-import LgPage from "../pages/login/login-page";
-import { AuthProvider } from "../shared/auth/auth-context";
-import HomePage from "../pages/home-page";
-import ManagerCategoriesPage from "../pages/managercategories-page";
-import ManagerProductPage from "../pages/managerproduct-page";
-import OrderPage from "../pages/order-page";
-import ShoppingCartPage from "../pages/shoppingcart-page";
-import ManageClientPage from "../pages/manage-client";
+import Error404Page from "../pages/errors/error-404-page";
+import { AuthProvider } from "../shared/auth/Auth-context";
+import HomePage from "../pages/website/home-page";
+import LgPage from "../pages/admin/login-page";
+import DashboardPage from "../pages/admin/dashboard-page ";
+import ManagerCategoriesPage from "../pages/admin/manager-categories-page";
+import ManagerProductPage from "../pages/admin/manager-product-page";
+import OrderPage from "../pages/admin/order-page";
+import ManageClientPage from "../pages/admin/manage-client-page";
+import RegisterPage from "../pages/admin/register-page";
 export default function RouterApp() {
   return (
     
@@ -28,9 +27,7 @@ export default function RouterApp() {
             <Route path="/categories" component={ManagerCategoriesPage} />
             <Route path="/productes" component={ManagerProductPage} />
             <Route path="/orders" component={OrderPage} />
-            <Route path="/shoppingcart" component={ShoppingCartPage} /> 
             <Route path="/customers" component={ManageClientPage} />
-            <Route path="/manageClient" component={ManageClientPage} />
             <Route path="*" component={Error404Page} />
         </Switch>
         </AuthProvider>

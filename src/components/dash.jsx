@@ -1,7 +1,6 @@
 import React from 'react'
 import "../assets/dash.css"
-import Globaldesign from './globaldesign'
-
+// cvbcfgngngf
 export default function Dash() {
     return (
         <div >

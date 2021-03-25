@@ -9,10 +9,11 @@ export default function Categorie(props) {
           <div className="container-fluid ">
             <div>
               <h2>Categorie</h2>
-              <form onSubmit={props.submit}>
+              <form onSubmit={props.action == "ADD" ? props.submit : props.submitEditCategorie  }>
                 <div className="mb-4 w-50" style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
                   <input
                     name="nom"
+                    value={props.editNom}
                     onChange={props.change}
                     type="text"
                     placeholder=" Name"
@@ -22,6 +23,7 @@ export default function Categorie(props) {
                 <div className="mb-4 " style={{ border: 'solid 0.5px black', backgroundColor: 'white' }}>
                   <textarea
                     name="description"
+                    value={props.editDesc}
                     onChange={props.change}
                     className="form-control" id="exampleFormControlTextarea1" placeholder=" Descriptions" rows={3} defaultValue={""} />
                 </div>
@@ -29,12 +31,14 @@ export default function Categorie(props) {
 
 
 
-                >ADD</button>
+                >{props.textBtnState}</button>
               </form>
             </div>
 
             <div className="input-group mb-3">
-              <input type="text" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2" />
+              <input 
+              onKeyUp={props.search}
+              type="text" className="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2" />
               <button className="btn btn-primary" type="button" id="button-addon2"><i className="fas fa-search" />
               </button>
             </div>
@@ -42,7 +46,7 @@ export default function Categorie(props) {
               <div className="col-lg-12 col-md-12">
                 <div className="card">
                   <div className="card-header card-header-primary">
-                    <h4 className="card-title">Orders Status</h4>
+                    <h4 className="card-title">Categories </h4>
                     <p className="card-category" />
                   </div>
                   <div className="card-body table-responsive">
@@ -61,6 +65,12 @@ export default function Categorie(props) {
                             datadata={s}
                             remove={props.remove}
                             edit={props.edit}
+                            editNom={props.editNom}
+                            editDesc={props.editDesc}
+                            action={props.action}
+                            change={props.change}
+                            submitEditCategorie={props.submitCategorie}
+                            textBtnState={props.textBtnState}
 
 
                           />)
